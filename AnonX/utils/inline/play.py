@@ -52,10 +52,9 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
-       ],
-       [  
             InlineKeyboardButton(
                 text="𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃", callback_data=f"add_playlist {videoid}"
+            ),
             ),
             InlineKeyboardButton(
                 text="𝚂𝚃𝙾𝙿", callback_data=f"ADMIN Stop|{chat_id}"
@@ -127,8 +126,6 @@ def telegram_markup_timer(_, chat_id, played, dur):
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
-        ],
-        [  
             InlineKeyboardButton(
                 text="𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃", callback_data=f"add_playlist {videoid}"
             ),
@@ -210,8 +207,6 @@ def telegram_markup(_, chat_id):
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
-        ],
-        [  
             InlineKeyboardButton(
                 text="𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃", callback_data=f"add_playlist {videoid}"
             ),
@@ -379,8 +374,6 @@ def queue_markup(_, videoid, chat_id):
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
-        ],
-        [  
             InlineKeyboardButton(
                 text="𝙿𝙻𝙰𝚈𝙻𝙸𝚂𝚃", callback_data=f"add_playlist {videoid}"
             ),
