@@ -126,6 +126,7 @@ def telegram_markup_timer(_, chat_id, played, dur):
             ),      
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
+            ),
         ],
         [  
             InlineKeyboardButton(
