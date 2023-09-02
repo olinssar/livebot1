@@ -51,7 +51,9 @@ def stream_markup_timer(_, videoid, chat_id, played, dur):
             ),
             InlineKeyboardButton(
                 text="☆", callback_data=f"add_playlist {videoid}"
-            )
+            ),
+        ],
+        [
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
@@ -163,7 +165,9 @@ def stream_markup(_, videoid, chat_id):
             ),
             InlineKeyboardButton(
                 text="☆", callback_data=f"add_playlist {videoid}"
-            )
+            ),
+        ],
+        [
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
@@ -369,8 +373,10 @@ def queue_markup(_, videoid, chat_id):
                 text="𝙿𝙰𝚄𝚂𝙴", callback_data=f"ADMIN Pause|{chat_id}"
             ),
             InlineKeyboardButton(
-                text="☆", callback_data=f"add_playlist {videoid}"
-            )
+                text="☆", callback_data=f"add_playlist {videoid}"       
+            ),
+        ],
+        [
             InlineKeyboardButton(
                 text="𝚂𝙺𝙸𝙿", callback_data=f"ADMIN Skip|{chat_id}"
             ),
