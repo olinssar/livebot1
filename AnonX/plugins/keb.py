@@ -92,8 +92,8 @@ REPLY_MESSAGE_BUTTONS = [
     ]
 ]
 
-@app.on_message(filters.command("/almrtagel") & filters.private & ~filters.edited)
-async def madison(client: Client, message: Message):       
+@app.on_message(filters.regex("/almortagel"))
+async def cpanel(_, message: Message):             
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
         await message.reply(
@@ -101,13 +101,14 @@ async def madison(client: Client, message: Message):
               reply_markup=reply_markup
         )
 
-@app.on_message(command("^اخفاء الازرار . 🕷$") & filters.private & ~filters.edited)
+
+@app.on_message(filters.regex("^اخفاء الازرار . 🕷$") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
     await message.reply_text(text="تم الازرار بنجاح .🕷",
         reply_markup=ReplyKeyboardRemove()
     )
 
-@app.on_message(filters.command(["صوره", "🕷", "صورهه", "صور"]))
+@app.on_message(filters.regex(["صوره", "🕷", "صورهه", "صور"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
     url = f"https://t.me/vnnkli/{rl}"
@@ -123,7 +124,7 @@ async def ihd(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.command(["انميي", "انمي"]))
+@app.on_message(filters.regex(["انميي", "انمي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots7/{rl}"
@@ -139,7 +140,7 @@ async def ihd(client: Client, message: Message):
     )
 
 
-@app.on_message(filters.command(["متحركه. 🎬", "متحركه"]))
+@app.on_message(filters.regex(["متحركه. 🎬", "متحركه"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/GifWaTaN/{rl}"
@@ -154,7 +155,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["اقتباسات", "اقتباس"]))
+@app.on_message(filters.regex(["اقتباسات", "اقتباس"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots9/{rl}"
@@ -169,7 +170,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["هيدرا", "هيدرات"]))
+@app.on_message(filters.regex(["هيدرا", "هيدرات"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/flflfldld/{rl}"
@@ -184,7 +185,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["صور", "افتار بنات"]))
+@app.on_message(filters.regex(["صور", "افتار بنات"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vvyuol/{rl}"
@@ -199,7 +200,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["صور شباب", "افتار شباب"]))
+@app.on_message(filters.regex(["صور شباب", "افتار شباب"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vgbmm/{rl}"
@@ -214,7 +215,7 @@ async def ihd(client: Client, message: Message):
         )
     )
     
-@app.on_message(filters.command(["سوره", "قران"]))
+@app.on_message(filters.regex(["سوره", "قران"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/opuml/{rl}"
@@ -229,7 +230,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["الشيخ", "النقشبندي", "نقشبندي"]))
+@app.on_message(filters.regex(["الشيخ", "النقشبندي", "نقشبندي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/ggcnjj/{rl}"
@@ -244,7 +245,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["عبدالباسط", "عبدالباسط عبدالصمد"]))
+@app.on_message(filters.regex(["عبدالباسط", "عبدالباسط عبدالصمد"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,50)
     url = f"https://t.me/telawatnader/{rl}"
