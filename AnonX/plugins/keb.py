@@ -1,9 +1,17 @@
 import asyncio
 from pyrogram import Client, filters
+from random import choice
+from pyrogram import filters
 from strings import get_command
 from strings.filters import command
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
+from config import BANNED_USERS
+from config.config import OWNER_ID
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
+                            InlineKeyboardMarkup, Message)
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from typing import Union
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest
 
 
 
@@ -84,7 +92,7 @@ REPLY_MESSAGE_BUTTONS = [
     ]
 ]
 
-@app.on_message(filters.command("/start") & filters.private & ~filters.edited)
+@app.on_message(filters.command("/almrtagel") & filters.private & ~filters.edited)
 async def madison(client: Client, message: Message):       
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
@@ -99,7 +107,7 @@ async def upbkgt(client: Client, message: Message):
         reply_markup=ReplyKeyboardRemove()
     )
 
-@app.on_message(command(["صوره", "🕷", "صورهه", "صور"]))
+@app.on_message(filters.command(["صوره", "🕷", "صورهه", "صور"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,50)
     url = f"https://t.me/vnnkli/{rl}"
@@ -115,7 +123,7 @@ async def ihd(client: Client, message: Message):
     )
 
 
-@app.on_message(command(["انميي", "انمي"]))
+@app.on_message(filters.command(["انميي", "انمي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots7/{rl}"
@@ -131,7 +139,7 @@ async def ihd(client: Client, message: Message):
     )
 
 
-@app.on_message(command(["متحركه. 🎬", "متحركه"]))
+@app.on_message(filters.command(["متحركه. 🎬", "متحركه"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/GifWaTaN/{rl}"
@@ -146,7 +154,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["اقتباسات", "اقتباس"]))
+@app.on_message(filters.command(["اقتباسات", "اقتباس"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/LoreBots9/{rl}"
@@ -161,7 +169,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["هيدرا", "هيدرات"]))
+@app.on_message(filters.command(["هيدرا", "هيدرات"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/flflfldld/{rl}"
@@ -176,7 +184,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["صور", "افتار بنات"]))
+@app.on_message(filters.command(["صور", "افتار بنات"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vvyuol/{rl}"
@@ -191,7 +199,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["صور شباب", "افتار شباب"]))
+@app.on_message(filters.command(["صور شباب", "افتار شباب"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(2,90)
     url = f"https://t.me/vgbmm/{rl}"
@@ -206,7 +214,7 @@ async def ihd(client: Client, message: Message):
         )
     )
     
-@app.on_message(command(["سوره", "قران"]))
+@app.on_message(filters.command(["سوره", "قران"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/opuml/{rl}"
@@ -221,7 +229,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["الشيخ", "النقشبندي", "نقشبندي"]))
+@app.on_message(filters.command(["الشيخ", "النقشبندي", "نقشبندي"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/ggcnjj/{rl}"
@@ -236,7 +244,7 @@ async def ihd(client: Client, message: Message):
         )
     )
 
-@app.on_message(command(["عبدالباسط", "عبدالباسط عبدالصمد"]))
+@app.on_message(filters.command(["عبدالباسط", "عبدالباسط عبدالصمد"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,50)
     url = f"https://t.me/telawatnader/{rl}"
