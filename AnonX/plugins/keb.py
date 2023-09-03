@@ -2,8 +2,8 @@ import asyncio
 from pyrogram import Client, filters
 from random import choice
 from pyrogram import filters
-from strings import get_filters.regex
-from strings.filters import filters.regex
+from strings import get_filters.command
+from strings.filters import filters.command
 from config import BANNED_USERS
 from config.config import OWNER_ID
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
@@ -79,9 +79,8 @@ REPLY_MESSAGE_BUTTONS = [
         ("اخفاء الازرار . 🕷")
     ]
 ]
-
-@app.on_message(filters.regex(["/Almortagel"]))
-async def cpanel(_, message: Message):             
+@app.on_message(filters.command(["/Almortagel"], "")& filters.private & ~filters.edited)
+async def madison(client: Client, message: Message):       
         text = REPLY_MESSAGE
         reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, resize_keyboard=True, selective=True)
         await message.reply(
@@ -90,7 +89,7 @@ async def cpanel(_, message: Message):
         )
 
 
-@app.on_message(filters.regex("^اخفاء الازرار . 🕷$") & filters.private & ~filters.edited)
+@app.on_message(filters.command("^اخفاء الازرار . 🕷$") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
     await message.reply_text(text="تم الازرار بنجاح .🕷",
         reply_markup=ReplyKeyboardRemove()
