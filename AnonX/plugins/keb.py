@@ -46,7 +46,7 @@ REPLY_MESSAGE_BUTTONS = [
           ]
 ]
 
-@app.on_message(filters.command("/Almortagel") & filters.private & ~filters.edited)
+@app.on_message(command("/Almortagel") & filters.private & ~filters.edited)
 async def madison(client: Client, message: Message): 
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
@@ -54,7 +54,7 @@ async def madison(client: Client, message: Message):
         text=text,
         reply_markup=reply_markup
     )
-    
+
     @app.on_message(command(["سوره", "قران"]))
 async def ihd(client: Client, message: Message):
     rl = random.randint(1,90)
