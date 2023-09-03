@@ -1,19 +1,9 @@
 import asyncio
 from pyrogram import Client, filters
-from random import choice
-from pyrogram import filters
 from strings import get_command
 from strings.filters import command
-from config import BANNED_USERS
-from config.config import OWNER_ID
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
-                            InlineKeyboardMarkup, Message)
-from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from typing import Union
-from pyrogram.types import InlineKeyboardButton
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest
-    
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
+from Anonx import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 
 
 REPLY_MESSAGE = "اليك لوحه التحكم الخاصه بالاعضاء"
