@@ -194,19 +194,3 @@ async def ihd(client: Client, message: Message):
             ]
         )
     )
-
-@app.on_message(command(["عبدالباسط", "عبدالباسط عبدالصمد"]))
-async def ihd(client: Client, message: Message):
-    rl = random.randint(1,50)
-    url = f"https://t.me/telawatnader/{rl}"
-    await client.send_audio(message.chat.id,url,caption="🐉 ¦ تـم اختيـار الشيخ عبدالباسط لـك",parse_mode="html",
-    reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        message.from_user.first_name, url=f"https://t.me/{message.from_user.username}")
-                ],
-            ]
-        )
-    )
-
