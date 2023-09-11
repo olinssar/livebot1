@@ -42,6 +42,12 @@ async def madison(client: Client, message: Message):
         text=text,
         reply_markup=reply_markup
     )
+    
+    @app.on_message(command("^اخفاء الازرار . 🕷$") & filters.private & ~filters.edited)
+async def upbkgt(client: Client, message: Message):
+    await message.reply_text(text="تم الازرار بنجاح .🕷",
+        reply_markup=ReplyKeyboardRemove()
+    )
 
     @app.on_message(filters.command(["سوره", "قران"], ""))
 async def ihd(client: Client, message: Message):
