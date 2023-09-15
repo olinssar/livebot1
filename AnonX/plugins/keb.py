@@ -5,8 +5,6 @@ from pyrogram import filters
 from strings import get_command
 from strings.filters import command
 from config import BANNED_USERS
-from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
-                            InlineKeyboardMarkup, Message)
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from typing import Union
 from pyrogram.types import InlineKeyboardButton
