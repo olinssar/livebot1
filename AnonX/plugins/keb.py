@@ -39,7 +39,7 @@ REPLY_MESSAGE_BUTTONS = [
     ]
 ]
 
-@app.on_message(command("/start") & filters.private & ~filters.edited)
+@app.on_message(command("/almortagel") & filters.private & ~filters.edited)
 async def madison(client: Client, message: Message): 
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
