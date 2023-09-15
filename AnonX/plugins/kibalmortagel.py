@@ -1,16 +1,14 @@
 import asyncio
-import os
-import time
-import requests
-from config import START_IMG_URL
+from pyrogram import Client, filters
+from random import choice
 from pyrogram import filters
-import random
-from pyrogram import Client
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup
+from strings import get_command
 from strings.filters import command
+from config import BANNED_USERS
 from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
-from AnonX import app
-from random import  choice, randint
+from typing import Union
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest
 
 @app.on_message(command(["صوره", "🕷", "صورهه", "صور"]))
 async def ihd(client: Client, message: Message):
