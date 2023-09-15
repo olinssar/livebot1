@@ -1,13 +1,23 @@
 import asyncio
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, ReplyKeyboardMarkup
-from Anonx import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from random import choice
+from pyrogram import filters
+from strings import get_command
+from strings.filters import command
+from config import BANNED_USERS
+from config.config import from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+from pyrogram.types import (InlineKeyboardButton,CallbackQuery,
+                            InlineKeyboardMarkup, Message)
+from AnonX import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
+from typing import Union
+from pyrogram.types import InlineKeyboardButton
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, ReplyKeyboardRemove, Message, ChatJoinRequest
 
-
-REPLY_MESSAGE = "اليك لوحه التحكم الخاصه بالاعضاء"
+#كسمك تحياتي😂
+REPLY_MESSAGE = "**🧑🏻‍✈️︙اهلا بك بك عزيزي المطور الاساسي ♥️**\n**⤵️︙ اليـكـ ازرار التحـكـم خاصة ب سورس الميوزك💞**"
 
 REPLY_MESSAGE_BUTTONS = [
-         [
+    [
              ("المطور"),                   
              ("سورس")
 
@@ -30,11 +40,11 @@ REPLY_MESSAGE_BUTTONS = [
           ],
           [
              ("الالعاب"),
-             ("قفل الكيب") 
-          ]
+        ("❎ ¦ حذف الكيبورد")
+    ]
 ]
 
-@app.on_message(filters.regex("^/Almortagel$") & filters.private & ~filters.edited)
+@app.on_message(command("/almortagel") & filters.private & ~filters.edited)
 async def madison(client: Client, message: Message): 
     text = REPLY_MESSAGE
     reply_markup = ReplyKeyboardMarkup(REPLY_MESSAGE_BUTTONS, one_time_keyboard=True, resize_keyboard=True)
@@ -42,10 +52,12 @@ async def madison(client: Client, message: Message):
         text=text,
         reply_markup=reply_markup
     )
-    
-    @app.on_message(command("^اخفاء الازرار . 🕷$") & filters.private & ~filters.edited)
-async def madison(client: Client, message: Message):
-    await message.reply_text(text="تم الازرار بنجاح .🕷",
+
+
+@app.on_message(command("❎ ¦ حذف الكيبورد") & filters.private & ~filters.edited)
+async def upbkgt(client: Client, message: Message):
+    await message.reply_text(
+        text="""❎ ¦ تم حذف الكيبورد بنجاح""",
         reply_markup=ReplyKeyboardRemove()
     )
 
