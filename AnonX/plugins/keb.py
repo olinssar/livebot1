@@ -58,7 +58,7 @@ async def upbkgt(client: Client, message: Message):
         reply_markup=ReplyKeyboardRemove()
     )
 
-    @app.on_message(filters.command(["سوره", "قران"], ""))
+    @app.on_message(command(["سوره", "قران"], ""))
 async def upbkgt(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/opuml/{rl}"
@@ -73,7 +73,7 @@ async def upbkgt(client: Client, message: Message):
         )
     )
 
-@app.on_message(filters.command(["الشيخ", "النقشبندي", "نقشبندي"], ""))
+@app.on_message(command(["الشيخ", "النقشبندي", "نقشبندي"], ""))
 async def upbkgt(client: Client, message: Message):
     rl = random.randint(1,90)
     url = f"https://t.me/ggcnjj/{rl}"
@@ -88,7 +88,7 @@ async def upbkgt(client: Client, message: Message):
         )
     )
     
-    @app.on_message(filters.command(["عبدالباسط", "عبدالباسط عبدالصمد"], ""))
+    @app.on_message(command(["عبدالباسط", "عبدالباسط عبدالصمد"], ""))
 async def upbkgt(client: Client, message: Message):
     rl = random.randint(1,50)
     url = f"https://t.me/telawatnader/{rl}"
