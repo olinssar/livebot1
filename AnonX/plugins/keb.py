@@ -20,31 +20,12 @@ REPLY_MESSAGE_BUTTONS = [
 
           ],
           [
-            ("رويال شباب"),
-            ("رويال بنات")
+             ("ذكاء الاصطناعي")
           ],
           [
-             ("استوريهات. 🥹")
+             ("افلام")
           ],
           [
-             ("النقشبندي"),
-             ("قران")
-          ],
-          [
-             ("فيلمك. 🎥")
-          ],
-          [
-             ("اقتباسات"),
-             ("هيدرات")
-         ],
-         [
-             ("صوره"),
-             ("انميي")
-         ],
-         [
-            ("متحركه. 🎬")
-         ],
-         [
              ("لو خيروك"),
              ("كت تويت") 
           ],
@@ -186,6 +167,21 @@ async def upbkgt(client: Client, message: Message):
         ),
     )
 
+@app.on_message(command("ذكاء الاصطناعي") & filters.private & ~filters.edited)
+async def upbkgt(client: Client, message: Message):
+    await message.reply_photo(
+        photo=f"https://telegra.ph/file/c544b771eeed7dbdc51a9.jpg",
+        caption=f"""• اليك طريقه معرفه سرعه البوت .\n\n• قم بـ استخدام الامر هكذا : /gpt\n\n• ★Almortagel⚡ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "• ★Almortagel⚡ .", url=f"https://t.me/AlmortagelTech"),
+            ],
+            ]
+        ),
+    )
+    
 @app.on_message(command("📡 ¦ بينج السرفر") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
     await message.reply_photo(
