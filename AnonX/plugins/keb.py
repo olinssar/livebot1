@@ -23,7 +23,8 @@ REPLY_MESSAGE_BUTTONS = [
              ("ذكاء الاصطناعي")
           ],
           [
-             ("افلام")
+             ("افلام"),
+          
           ],
           [
              ("لو خيروك"),
@@ -181,24 +182,6 @@ async def upbkgt(client: Client, message: Message):
             ]
         ),
     )
-    
-    @app.on_message(command("عبدالباسط") & filters.private & ~filters.edited)
-async def upbkgt(client: Client, message: Message):
-    await message.reply_audio(
-         rl = random.randint(1,50)
-        audio=f"https://t.me/telawatnader/{rl}",
-        caption=f"""• اليك طريقه حظر اي شخص .\n\n• قم بـ استخدام الامر هكذا : /block حظر ميوزك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                    InlineKeyboardButton(
-                        "• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ .", url=f"https://t.me/AlmortagelTech"),
-            ],
-            ]
-        ),
-    )
-     rl = random.randint(1,50)
-    url = f"https://t.me/telawatnader/{rl}
     
 @app.on_message(command("📡 ¦ بينج السرفر") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
