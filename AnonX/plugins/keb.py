@@ -186,9 +186,9 @@ async def upbkgt(client: Client, message: Message):
     
 @app.on_message(command("استوري") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
-    await message.send_audio(
+    await client.send_audio(
             rl = random.randint(1,50)
-        url=f"https://t.me/yoipopl/{rl}",
+        audio=f"https://t.me/yoipopl/{rl}",
         caption=f"""• تـم اختيـار استوري لـك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -201,9 +201,9 @@ async def upbkgt(client: Client, message: Message):
     )
     @app.on_message(command("افاتار بنات") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
-    await message.send_photo(
+    await client.send_photo(
                 rl = random.randint(2,90)
-        url=f"https://t.me/vvyuol/{rl}",
+        photo=f"https://t.me/vvyuol/{rl}",
         caption=f"""• تـم اختيـار افاتار بنات لـك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
         reply_markup=InlineKeyboardMarkup(
             [
@@ -217,9 +217,9 @@ async def upbkgt(client: Client, message: Message):
     
     @app.on_message(command("افاتار شباب") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
-    await message.send_photo(
+    await client.send_photo(
                 rl = random.randint(2,90)
-        url=f"https://t.me/vgbmm/{rl}",
+        photo=f"https://t.me/vgbmm/{rl}",
         caption=f"""• تـم اختيـار افاتار شباب لـك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
         reply_markup=InlineKeyboardMarkup(
             [
