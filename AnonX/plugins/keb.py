@@ -32,6 +32,10 @@ REPLY_MESSAGE_BUTTONS = [
              ("صراحه") 
           ],
           [
+             ("افاتار شباب"),
+             ("افاتار بنات") 
+          ],
+          [
              ("غنيلي"),
              ("سوال") 
           ],
@@ -180,11 +184,43 @@ async def upbkgt(client: Client, message: Message):
         ),
     )
     
-@app.on_message(command("📡 ¦ بينج السرفر") & filters.private & ~filters.edited)
+@app.on_message(command("استوري") & filters.private & ~filters.edited)
 async def upbkgt(client: Client, message: Message):
-    await message.reply_photo(
-        photo=f"https://telegra.ph/file/a9e24a3f58f9e8e2da866.jpg",
-        caption=f"""• اليك طريقه معرفه سرعه البوت .\n\n• قم بـ استخدام الامر هكذا : بينج\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
+    await message.send_audio(
+            rl = random.randint(1,50)
+        url=f"https://t.me/yoipopl/{rl}",
+        caption=f"""• تـم اختيـار استوري لـك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ .", url=f"https://t.me/AlmortagelTech"),
+            ],
+            ]
+        ),
+    )
+    @app.on_message(command("افاتار بنات") & filters.private & ~filters.edited)
+async def upbkgt(client: Client, message: Message):
+    await message.send_photo(
+                rl = random.randint(2,90)
+        url=f"https://t.me/vvyuol/{rl}",
+        caption=f"""• تـم اختيـار افاتار بنات لـك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
+        reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ .", url=f"https://t.me/AlmortagelTech"),
+            ],
+            ]
+        ),
+    )
+    
+    @app.on_message(command("افاتار شباب") & filters.private & ~filters.edited)
+async def upbkgt(client: Client, message: Message):
+    await message.send_photo(
+                rl = random.randint(2,90)
+        url=f"https://t.me/vgbmm/{rl}",
+        caption=f"""• تـم اختيـار افاتار شباب لـك\n\n• ѕᴏụʀᴄᴇ ᴀʟᴍᴏʀᴛᴀɢᴇʟ » @AlmortagelTech .\n•⊶⊶★─⊶『[Almortagel](https://t.me/AlmortagelTech)』⊶⊶★─⊶•""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
