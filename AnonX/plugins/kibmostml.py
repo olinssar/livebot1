@@ -152,7 +152,7 @@ async def ihd(client: Client, message: Message):
     
 @app.on_message(command(["عبدالباسط", "عبدالباسط عبدالصمد"]))
 async def ihd(client: Client, message: Message):
-    rl = random.randint(7,264)
+    rl = random.randint(7,265)
     url = f"https://t.me/telawatnader/{rl}"
     await client.send_audio(message.chat.id,url,caption="🥹♥ ¦ تـم اختيـار الشيخ عبدالباسط لـك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
@@ -167,7 +167,7 @@ async def ihd(client: Client, message: Message):
     
     @app.on_message(command(["تلاوات", "تلاوة"]))
 async def ihd(client: Client, message: Message):
-    rl = random.randint(7,276)
+    rl = random.randint(7,277)
     url = f"https://t.me/ALMORTAGELRSK/{rl}"
     await client.send_audio(message.chat.id,url,caption="🥹♥ ¦ تـم اختيـار تلاوات لـك",parse_mode="html",
     reply_markup=InlineKeyboardMarkup(
