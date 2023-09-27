@@ -78,20 +78,20 @@ def prayer_time():
    try:
        prayer = requests.get(f"http://api.aladhan.com/timingsByAddress?address=Cairo&method=4&school=0")
        prayer = prayer.json()
-       fajr = datetime.strptime(prayer['data']['timings']['Fajr'], '%H:%M').strftime('%I:%M %p')
-       dhuhr = datetime.strptime(prayer['data']['timings']['Dhuhr'], '%H:%M').strftime('%I:%M %p')
-       asr = datetime.strptime(prayer['data']['timings']['Asr'], '%H:%M').strftime('%I:%M %p')
-       maghrib = datetime.strptime(prayer['data']['timings']['Maghrib'], '%H:%M').strftime('%I:%M %p')
-       isha = datetime.strptime(prayer['data']['timings']['Isha'], '%H:%M').strftime('%I:%M %p')
-       if datetime.now(tz).strftime('%I:%M %p') == fajr:
+       fajr = datetime.strptime(prayer['data']['timings']['Fajr'], '%H:%M').strftime('%H:%M')
+       dhuhr = datetime.strptime(prayer['data']['timings']['Dhuhr'], '%H:%M').strftime('%H:%M')
+       asr = datetime.strptime(prayer['data']['timings']['Asr'], '%H:%M').strftime('%H:%M')
+       maghrib = datetime.strptime(prayer['data']['timings']['Maghrib'], '%H:%M').strftime('%H:%M')
+       isha = datetime.strptime(prayer['data']['timings']['Isha'], '%H:%M').strftime('%H:%M')
+       if datetime.now(tz).strftime('%H:%M') == fajr:
          return "الفجر"
-       elif datetime.now(tz).strftime('%I:%M %p') == dhuhr:
+       elif datetime.now(tz).strftime('%H:%M') == dhuhr:
          return "الظهر"
-       elif datetime.now(tz).strftime('%I:%M %p') == asr:
+       elif datetime.now(tz).strftime('%H:%M') == asr:
          return "العصر"
-       elif datetime.now(tz).strftime('%I:%M %p') == maghrib:
+       elif datetime.now(tz).strftime('%H:%M') == maghrib:
          return "المغرب"
-       elif datetime.now(tz).strftime('%I:%M %p') == isha:  
+       elif datetime.now(tz).strftime('%H:%M') == isha:  
          return "العشاء"
    except Exception as e:
        asyncio.sleep(5)
