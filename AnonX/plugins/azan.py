@@ -45,7 +45,7 @@ async def kill():
 
 async def play(i):
   assistant = await group_assistant(Anon,i)
-  file_path = "./AnonX/assets/azan.m4a"
+  file_path = "https://aladhan.com/play"
   stream = AudioPiped(file_path, audio_parameters=HighQualityAudio())
   try:
       await assistant.join_group_call(
@@ -76,7 +76,7 @@ async def play(i):
 
 def prayer_time():
    try:
-       prayer = requests.get(f"http://api.aladhan.com/timingsByAddress?address=Cairo&method=4&school=0")
+       prayer = requests.get(f"http://api.aladhan.com/v1/timingsByCity?city=cairo&country=Egypt&method=8")
        prayer = prayer.json()
        fajr = datetime.strptime(prayer['data']['timings']['Fajr'], '%H:%M').strftime('%H:%M')
        dhuhr = datetime.strptime(prayer['data']['timings']['Dhuhr'], '%H:%M').strftime('%H:%M')
@@ -105,7 +105,7 @@ async def azkar():
      prayer = prayer_time()
      await kill()
      for i in chat:
-       await app.send_message(i, f"حان الان وقت اذان {prayer} بتوقيت القاهرة 🥰♥️")
+       await app.send_message(i, f"حان الان وقت اذان {prayer} بالتوقيت المحلي للقاهرة 🥰♥️")
        await play(i)
      await asyncio.sleep(174)
      await kill()
